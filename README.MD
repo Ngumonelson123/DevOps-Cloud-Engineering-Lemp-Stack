@@ -55,8 +55,8 @@ http://your-ec2-public-ip
 
 You should see the "Welcome to nginx!" default page.
 
-![Nginx Installation](screenshots/01-nginx-installation.png)
-
+![Nginx Installation](screenshots/02-mysql-installation.png)
+![PHP Test](screenshots/05-php-test.png)
 #### 1.6 Verify Nginx Status
 Check that Nginx service is active and running:
 
@@ -64,7 +64,7 @@ Check that Nginx service is active and running:
 sudo systemctl status nginx
 ```
 
-![Nginx Status](screenshots/08-nginx-status.png)
+![Nginx Status](screenshots/03-php-installation.png)
 
 ---
 
@@ -115,12 +115,12 @@ EXIT;
 #### 2.5 MySQL Secure Installation Process
 The security script will prompt for various security configurations:
 
-![MySQL Secure Installation](screenshots/09-mysql-secure-installation.png)
+![MySQL Secure Installation](screenshots/08-nginx-status.png)
 
 #### 2.6 MySQL User and Database Creation
 After securing MySQL, create the application database and user:
 
-![MySQL User Creation](screenshots/10-mysql-user-creation.png)
+![MySQL User Creation](screenshots/extra-11.png.png)
 
 ---
 
@@ -147,7 +147,7 @@ Ensure PHP-FPM service is running:
 sudo systemctl status php7.4-fpm
 ```
 
-![PHP Installation](screenshots/03-php-installation.png)
+![PHP Installation](screenshots/09-mysql-secure-installation.png)
 
 ---
 
@@ -198,6 +198,7 @@ server {
     }
 }
 ```
+![Nginx Configuration](screenshots/12-additional-step.png)
 
 #### 4.4 Enable the New Server Block
 Create a symbolic link to enable the site:
@@ -234,7 +235,7 @@ Create a simple HTML file to test the configuration:
 echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectLEMP/index.html
 ```
 
-![Nginx Configuration](screenshots/04-nginx-configuration.png)
+![Web Server](screenshots/extra-35.png.png)
 
 ---
 
@@ -275,7 +276,9 @@ After testing, remove the info.php file as it contains sensitive information:
 rm /var/www/projectLEMP/info.php
 ```
 
-![PHP Test](screenshots/05-php-test.png)
+![PHP Test](screenshots/extra-04.png.png)
+
+![PHP Test](screenshots/13-additional-step.png)
 
 ---
 
@@ -330,7 +333,10 @@ SELECT * FROM todo_list;
 EXIT;
 ```
 
-![MySQL Database Setup](screenshots/06-mysql-database.png)
+![MySQL Database Setup](screenshots/extra-15.png.png)
+
+![MySQL Database Setup](screenshots/extra-16.png.png)
+
 
 ---
 
@@ -366,6 +372,8 @@ try {
 }
 ?>
 ```
+![PHP Code to Connect](screenshots/15-final-output.png)
+
 
 #### 7.3 Test the PHP Application
 Access the todo list application in your web browser:
@@ -379,7 +387,7 @@ The page should display:
 - An ordered list of all items from the database
 - Proper HTML formatting
 
-![PHP Todo Application](screenshots/07-php-todo-app.png)
+![PHP Todo Application](screenshots/extra-54.png.png)
 
 ---
 
@@ -402,7 +410,10 @@ The todo list application demonstrates:
 - **Database**: MySQL storing and retrieving data
 - **Web Server**: Nginx serving PHP content via FastCGI
 
-![Final Output](screenshots/15-final-output.png)
+![Final Output](screenshots/extra-35.png.png)
+
+![PHP Todo Application](screenshots/extra-54.png.png)
+
 
 ### Additional Implementation Screenshots
 The following screenshots show additional steps and verifications performed during the implementation:

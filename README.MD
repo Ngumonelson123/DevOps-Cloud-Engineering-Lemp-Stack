@@ -439,7 +439,7 @@ The following screenshots show additional steps and verifications performed duri
 
 ---
 
-## 📚 Key Learning Outcomes
+##  Key Learning Outcomes
 
 ### Technical Skills Acquired:
 - **Linux System Administration**: Package management, service configuration
